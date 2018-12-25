@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import WeatherConditions from './WeatherConditions';
+
 const baseURL = "http://api.openweathermap.org/";
 const apiKey = "5d580e44ba6e4c6f717d103b0ed5a4f1";
 
@@ -32,6 +34,7 @@ class Weather extends React.Component {
           <div>wind speed: {this.state.weather.data.wind.speed}</div>
           <div>wind direction: {this.state.weather.data.wind.deg}</div>
           <div>Description: {this.state.weather.data.weather[0].main}</div>
+          <WeatherConditions condition={this.state.weather.data.weather[0].main} />
           <div>Sunrise: {this.state.weather.data.sys.sunrise}</div>
           <div>Sunset: {this.state.weather.data.sys.sunset}</div>
           <div>Clouds: {this.state.weather.data.clouds.all}%</div>
