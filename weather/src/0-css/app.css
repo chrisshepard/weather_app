@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  background: #d2e1dd; }
+  background: #162955; }
 
 h1 {
   font-family: Georgia, Times, serif; }
@@ -13,5 +13,23 @@ h2, h3 {
   height: 20vw;
   border-radius: 3px;
   background: yellow; }
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  z-index: -10;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: black; }
+  .logo img {
+    height: auto;
+    width: 20vw; }
+
+.text {
+  margin-top: -60%;
+  z-index: 1;
+  text-align: center; }
 
 /*# sourceMappingURL=app.css.map */
