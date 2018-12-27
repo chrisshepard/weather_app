@@ -5,6 +5,7 @@ import Weather from './Weather';
 import Loading from './Loading';
 import Clock from './Clock';
 import Logo from '../1-media/logo.png';
+import Nav from './Nav';
 
 
 
@@ -31,11 +32,13 @@ class App extends React.Component {
     if (!this.state.errorMessage && this.state.lat) {
       return (
         <div>
-          <Clock />
-          <div><img src={Logo} alt="logo" className="logo"/></div>
-          <div>
-            <h2>Lat: {this.state.lat}</h2>
-            <h2>Long: {this.state.long}</h2>
+          <Nav />
+          <div className="top-info-panel">
+            <Clock />
+            <div>
+              <span className='loc'>Lat: {this.state.lat}</span>
+              <span className= 'loc'>Long: {this.state.long}</span>
+            </div>
           </div>
           <Weather lat={this.state.lat} long={this.state.long} />
           <Forecast lat={this.state.lat} long={this.state.long} />
