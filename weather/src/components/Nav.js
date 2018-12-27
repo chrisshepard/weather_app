@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
-
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
+import Clock from './Clock';
 import Logo from '../1-media/logo.png';
 
 const colorsA = ['red', 'orange', 'yellow', 'olive', 'green', 'teal']
@@ -44,6 +44,8 @@ export default class MenuExampleColoredInverted extends Component {
               color={colorsA[3]}
               onClick={this.handleAClick}
             />
+            <Clock />
+            
              <div><img src={Logo} alt="logo" className="logo"/></div>
         </Menu>
       </div>

@@ -27,17 +27,32 @@ class Weather extends React.Component {
       console.log(this.props);
       console.log(this.state.weather);
       return (
-        <div>
-          <div>city: {this.state.weather.data.name}</div>
-          <div>temp: {this.state.weather.data.main.temp}&#8457;</div>
-          <div>humidity: {this.state.weather.data.main.humidity}%</div>
-          <div>wind speed: {this.state.weather.data.wind.speed}</div>
-          <div>wind direction: {this.state.weather.data.wind.deg}</div>
-          <div>Description: {this.state.weather.data.weather[0].main}</div>
-          <WeatherConditions condition={this.state.weather.data.weather[0].main} />
-          <div>Sunrise: {this.state.weather.data.sys.sunrise}</div>
-          <div>Sunset: {this.state.weather.data.sys.sunset}</div>
-          <div>Clouds: {this.state.weather.data.clouds.all}%</div>
+        <div className="weather">
+          <div className="row">
+            <h1>{this.state.weather.data.name}</h1>
+
+          </div>
+          <div className="row">
+            <div className="column">
+              <WeatherConditions condition={this.state.weather.data.weather[0].main} />
+              <h1 className="temp">{this.state.weather.data.main.temp}&#8457;</h1>
+            </div>
+
+            <div className="column">
+              <div>humidity: {this.state.weather.data.main.humidity}%</div>
+              <div>wind speed: {this.state.weather.data.wind.speed}</div>
+              <div>wind direction: {this.state.weather.data.wind.deg}</div>
+              <div>Clouds: {this.state.weather.data.clouds.all}%</div>
+            </div>
+          </div>
+          <h2 className="row center">{this.state.weather.data.weather[0].main}</h2>
+          <div className="row">
+            <div>Sunrise: {this.state.weather.data.sys.sunrise}</div>
+            <div>Sunset: {this.state.weather.data.sys.sunset}</div>
+          </div>
+
+
+
         </div>
 
       );

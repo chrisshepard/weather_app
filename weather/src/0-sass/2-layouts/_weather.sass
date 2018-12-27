@@ -1,0 +1,35 @@
+.weather
+  display: flex
+  flex-direction: column
+  padding-top: 5vh
+  width: 40vw
+  padding-left: 5vw
+
+  .row 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+  .center
+    justify-content: center
+
+  .column
+    display: flex
+    flex-direction: column
+
+  .temp
+    margin-top: 1vh
+    padding-top: 0
+
+
+.condition
+  width: 30vh
+  height: auto
+
+
+@media only screen and (max-width: 800px) 
+  .weather
+    width: 100vw
+    .row
+      justify-content: space-around

@@ -3,6 +3,8 @@ body {
   background: #162955;
   color: white;
   height: 100%; }
+  body body > div {
+    width: 100%; }
 
 h1 {
   font-family: Georgia, Times, serif; }
@@ -12,15 +14,53 @@ h2, h3 {
 
 .ui.inverted.menu {
   height: 8vh;
-  width: 100%;
-  margin-top: 2vh; }
+  width: 100%; }
 
 .top-info-panel {
   display: flex;
   justify-content: space-between;
-  margin-top: 1vh; }
+  margin-top: 1vh;
+  padding-left: 1vw; }
   .top-info-panel .loc {
     margin: 0 2vw; }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  width: 40vw;
+  padding-left: 5vw; }
+  .weather .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .weather .center {
+    justify-content: center; }
+  .weather .column {
+    display: flex;
+    flex-direction: column; }
+  .weather .temp {
+    margin-top: 1vh;
+    padding-top: 0; }
+
+.condition {
+  width: 30vh;
+  height: auto; }
+
+@media only screen and (max-width: 800px) {
+  .weather {
+    width: 100vw; }
+    .weather .row {
+      justify-content: space-around; } }
+.attribution {
+  position: fixed;
+  bottom: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  width: 100vw;
+  z-index: -1; }
 
 .box {
   width: 20vw;
@@ -29,10 +69,10 @@ h2, h3 {
   background: yellow; }
 
 .logo {
-  height: 8vh;
+  height: 6vh;
   width: auto;
   position: fixed;
   right: 1vw;
-  bottom: 1vw; }
+  bottom: 0.1vw; }
 
 /*# sourceMappingURL=app.css.map */
